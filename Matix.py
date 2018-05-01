@@ -32,5 +32,21 @@ class Matrix:
         return trace
 
     def transpoze(self):
-        return self.rows
+        transpoze=[[0] * self.n for x in range(self.m)]
+
+        if self.m == self.n:
+            for i in range(self.m):
+                for j in range(self.n):
+                    transpoze[j][i] = self.rows[i][j]
+        return transpoze
+
+    def matrixMultiplication(self,matrix):
+        result = [[0] * self.n for x in range(self.m)]
+        for i in range(self.m):
+            for j in range(self.n):
+                for k in range(self.n):
+                    result[i][j] += self.rows[i][k] * matrix[k][j]
+        return result
+
+
 
