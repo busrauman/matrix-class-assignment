@@ -26,25 +26,28 @@ def matrixMultiplication(arg0, arg1):
         print("Birinci matrisin satır sayısı  ile ikinci matrisin sütün sayısı eşit olmalıdır ")
     else:
         for i in range(len(arg0)):
-            for j in range(len(arg0[0])):
+            for j in range(len(arg1[0])):
                 for k in range(len(arg0[0])):
                     result[i][j] += arg0[i][k] * arg1[k][j]
     return result
 
 
 def determinant(matrix):
-    determinant = 0
-    if len(matrix) == 2:
-        return (matrix[0][0] * matrix[1][1]) - (matrix[0][1] * matrix[1][0])
-    for i in range(len(matrix)):
-        pow = ((-1) ** i)
-        item = matrix[0][i]
-        m = coFactor(0, i, matrix)
-        determinant += pow * item * determinant(m)
-    return determinant
+    if len(matrix) == len(matrix[0]):
+        determinant = 0
+        if len(matrix) == 2:
+            return (matrix[0][0] * matrix[1][1]) - (matrix[0][1] * matrix[1][0])
+        for i in range(len(matrix)):
+            pow = ((-1) ** i)
+            item = matrix[0][i]
+            m = coFactor(0, i, matrix)
+            determinant += pow * item * determinant(m)
+        return determinant
+    else:
+        print("Lütfen kare matris giriniz")
 
 
-def coFactor(self, i, j, matrix):
+def coFactor(i, j, matrix):
     newMatrix = [[0] * (len(matrix) - 1) for x in range(len(matrix[0]) - 1)]
     row = 0
     col = 0
@@ -54,7 +57,7 @@ def coFactor(self, i, j, matrix):
                 if x != i and y != j:
                     newMatrix[row][col] = matrix[x][y]
                     col += 1
-        if col >= (self.n - 1):
+        if col >= (len(matrix[0]) - 1):
             row += 1
         col = 0
     return newMatrix
