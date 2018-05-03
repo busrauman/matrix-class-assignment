@@ -1,13 +1,9 @@
 from Matix import *
 
 
-A = Matrix(5,5)
+A = Matrix(3,3)
 A.setMatrix()
-
-#A.scalarMultiplication(2)
-#print(A.transpoze())
-
+A.setItem(0,0,5)
+A.setItem(0,1,6)
 A.showMatrix()
-
-X=A.removeRowAndCol(1,3)
-print(X)
+print(A.determinant(A.rows))
