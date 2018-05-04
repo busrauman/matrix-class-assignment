@@ -39,3 +39,6 @@ Two Matrix Multiplication
 ```
 # Links
 *  *Installtion* - [Python Guide](http://docs.python-guide.org/en/latest/starting/install3/linux/)
+*  *Gaussian  Elimination* - [Gaussian  Elimination](http://www.vikparuchuri.com/blog/inverting-your-very-own-matrix/)
+*  *Matrix Guide* -[Why does a matrix have to be square to get an inverse matrix?](https://www.quora.com/Why-does-a-matrix-have-to-be-square-to-get-an-inverse-matrix)
+*  *Multiple inverse of a matrix* [Multiple inverse](https://www.quora.com/Can-there-be-multiple-inverses-for-a-matrix)
