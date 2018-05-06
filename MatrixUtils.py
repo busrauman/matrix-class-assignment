@@ -69,3 +69,56 @@ def scalarMultiplication(matrix,multiplier):
             matrix[i][j] *= multiplier
 
      return matrix
+
+
+def showMatrix(matrix):
+    print(matrix)
+
+def setIdentityMatrix(size):
+    matrix = [[0] * size for x in range(size)]
+    for k in range(size):
+        matrix[k][k] = 1
+    return  matrix
+
+def inverseMatrixWithGussianElimination(matrix):
+    row = len(matrix)
+    col = len(matrix[0])
+
+    for i in range(row - 1):
+        if matrix[i][i] == 0:
+            for j in range(i+1,row):
+                if(matrix[j][i] == 0):
+                    if((j+1) == row ):
+                        print("Matrisin tersi hesaplanamaz.")
+                else:
+                    # row i row j ile swap edilir
+                    matrix = swapRows(matrix, i, j)
+
+
+
+        for k in range(i+1,row):
+            r = matrix[k][i] / matrix[i][i]
+            # i. satırı r ile çarp k. satırdan çıkar
+            matrix = elemination(matrix,i,k,r)
+    return matrix
+
+
+def elemination(matrix,i,k,r):
+    for x in range(len(matrix)):
+        matrix[i][x] *= r
+        matrix[i][x] = matrix[i][k] - matrix[i][x]
+    return matrix
+
+
+def swapRows(matrix,i,k):
+    for x in range(len(matrix)):
+        tmp = matrix[i][x]
+        matrix[i][x] = matrix[k][x]
+        matrix[k][x] =tmp
+    return matrix
+
+
+
+
+
+
