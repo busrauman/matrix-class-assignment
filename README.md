@@ -1,6 +1,16 @@
 # matrix-class-assignment
 This project refers Matrix implementations.
-We have an Matrix class and you can create an object from this class then you can use matrix functions. 
+We have an Matrix class and you can create an object from this class then you can use matrix functions.
+### For Example
+```
+Scalar Matrix Multiplication
+Calculation Determinant
+Trace of Matrix
+Two Matrix Multiplication
+Calculate Matrix inverse with Gaussian Elimination Algorithm
+```
+
+
 
 ### Get Started
 Firstly, You need Python on your pc. Let's see how to install python your computer.
@@ -30,13 +40,6 @@ $ python3
 ```
 
 
-### For Example
-```
-Scalar Matrix Multiplication
-Calculation Determinant
-Trace of Matrix
-Two Matrix Multiplication	
-```
 # Links
 *  *Installtion* - [Python Guide](http://docs.python-guide.org/en/latest/starting/install3/linux/)
 *  *Gaussian  Elimination* - [Gaussian  Elimination](http://www.vikparuchuri.com/blog/inverting-your-very-own-matrix/)
