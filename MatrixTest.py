@@ -1,19 +1,15 @@
 from Matix import *
 from MatrixUtils import *
 
-A = Matrix(2,2)
-B = Matrix(2,2)
+A = Matrix(3,3)
+B = Matrix(3,2)
 B.setMatrix()
 A.setMatrix()
-A.setItem(0,0,5)
-A.setItem(0,1,6)
-A.showMatrix()
-B.showMatrix()
-trace(A.rows)
-#print(A.matrixMultiplication(B.rows))
-print(matrixMultiplication(A.rows,B.rows))
+#A.setItem(0,1,0)
+A.setItem(1,1,0)
 
-print("trace : %d" % trace(A.rows))
-print(determinant(A.rows))
 
-print(scalarMultiplication(A.rows,3))
+#print(A.matrixMultiplication(B.rows
+print(A.rows)
+print(inverseMatrixWithGussianElimination(A.rows))
+

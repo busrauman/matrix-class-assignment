@@ -15,8 +15,6 @@ class Matrix:
                 self.rows[x][y] = k
                 k += 1
 
-    def showMatrix(self):
-        print(self.rows)
 
     def getItem(self,i,j):
         if self.m >= i  and self.n >= j:
